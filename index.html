@@ -16,7 +16,12 @@
           <input type="text" v-model="newTask.text" placeholder="Nuova Task" class="new-task">
           <button @click="addTask" class="add-button">Aggiungi</button>
         </div>
-        
+        <ul class="task-list">
+            <li v-for="(task, index) in tasks" class="task-item">
+              <span :class="{ 'completed': task.done }" @click="toggleDone(index)">{{ task.text }}</span>
+              <button @click="removeTask(index)" class="remove-button">X</button>
+            </li>
+          </ul>    
       </div>
     </div>
 
