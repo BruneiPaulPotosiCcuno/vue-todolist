@@ -13,14 +13,12 @@
     </header>
     <div class="container">
         <div class="header">
-            <input type="text" placeholder="New Task" class="new-task">
-            <button class="add-button">Aggiungi</button> 
-          </div>
-          <ul class="task-list">
-          </ul>
+          <input type="text" v-model="newTask.text" placeholder="Nuova Task" class="new-task">
+          <button @click="addTask" class="add-button">Aggiungi</button>
         </div>
+        
+      </div>
     </div>
-  </div>
 
   <script src="https://unpkg.com/vue@3"></script>
   <script src="/js/script.js"></script>

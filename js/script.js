@@ -12,7 +12,17 @@
 // Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
 
 //Crea la data per Vue
-
 const app = Vue.createApp({
+    data() {
+      return {
+        newTask: { text: '', done: false },
+        tasks: [
+          { text: "Completare un markup", done: false },
+          { text: "Andare a fare sport", done: true },
+        ]
+      };
+    },
     
-});
+  });
+  //Montare il vue
+  app.mount('#app');
