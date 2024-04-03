@@ -14,3 +14,32 @@
     justify-content: center;
     align-items: center; 
   }
+
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .new-task {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .add-button {
+    padding: 10px 20px;
+    color: #009b7a;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
