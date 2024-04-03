@@ -22,7 +22,24 @@ const app = Vue.createApp({
         ]
       };
     },
-    
+//Methods
+
+    methods: {
+      addTask() {
+        if (this.newTask.text !== '') {
+          this.tasks.push({ ...this.newTask });
+          this.newTask.text = '';
+          this.newTask.done = false;
+        }
+      },
+      removeTask(index) {
+        this.tasks.splice(index, 1);
+      },
+      toggleDone(index) {
+        this.tasks[index].done = !this.tasks[index].done;
+      }
+    }
+
   });
   //Montare il vue
   app.mount('#app');
